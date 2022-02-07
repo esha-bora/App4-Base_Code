@@ -34,26 +34,26 @@ blah, blah, blah, blah
 
 
 <script>
-        var allergy_count = 0;
-        var cold_count = 0;
+        var mal_count = 0;
+        var benign_count = 0;
 
 
-        function allergyAdd(){
-            allergy_count = allergy_count + 1;
-		alert(allergy_count);
+        function malAdd(){
+            mal_count = mal_count + 1;
+		alert(mal_count);
 
         }
 
-        function coldAdd(){
-            cold_count = cold_count + 1;
-		alert(cold_count);
+        function benignAdd(){
+            benign_count = benign_count + 1;
+		alert(benign_count);
 
         }
 	
 	 function results(){
-            var allergyPercent = ((allergy_count)/(allergy_count + cold_count)) *100;
-	    var coldPercent = ((cold_count)/(allergy_count + cold_count)) *100; 
-	    document.getElementById("results").innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent; 	 
+            var malPercent = ((mal_count)/(mal_count + benign_count)) *100;
+	    var benignPercent = ((benign_count)/(mal_count + benign_count)) *100; 
+	    document.getElementById("results").innerHTML = "Probability it is a malignant tumor is =" + malPercent + "<br> Probability it is a benign tumor is =" + benignPercent; 	 
         }
 	// added function results to create variables that will calculate the percentage for allergies and cold based on the clicks 
 	// added getElement to display the results whenever the results button is clicked
@@ -86,11 +86,11 @@ blah, blah, blah, blah
 
 <body>
 <div id="header" class="w3-container w3-flat-carrot">
-	<h1>Cold or Allergies?</h1>
+	<h1>Benign or Malignant?</h1>
 </div>
 	
 <div id="content" class="w3-container">
-	<p>Are you feeling like you might have a cold but wonder if it is allergies. Answer a few short questions to find out!</p>
+	<p>Is the tumor beningn or malignant? Answer a few short questions to find out!</p>
 	
 	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a>
 	
@@ -104,9 +104,9 @@ blah, blah, blah, blah
 	</div>
 	
     	<div id="content" class="w3-container">
-        <p>Are your eyes watery or itchy?</p>
-	<a href="#two" onclick="allergyAdd();" class="w3-btn w3-black"> Yes </a>
-	<a href="#two" onclick="coldAdd();" class="w3-btn w3-black"> No </a>
+        <p>Does the tumor move around easily?</p>
+	<a href="#two" onclick="benignAdd();" class="w3-btn w3-black"> Yes </a>
+	<a href="#two" onclick="malAdd();" class="w3-btn w3-black"> No </a>
     	</div>
 </div>
 
@@ -118,9 +118,9 @@ blah, blah, blah, blah
 	</div>
 	
 	<div id="content" class="w3-container">
-	<p>Do you have a fever?</p>
-	<a href="#three" onclick="coldAdd();" class="w3-btn w3-black"> Yes </a>
-	<a href="#three" onclick="allergyAdd();" class="w3-btn w3-black"> No </a>
+	<p>Is there skin discolaration around the tumor?</p>
+	<a href="#three" onclick="malAdd();" class="w3-btn w3-black"> Yes </a>
+	<a href="#three" onclick="benignAdd();" class="w3-btn w3-black"> No </a>
 	</div>
 </div>		
 	
@@ -133,9 +133,9 @@ blah, blah, blah, blah
 	</div>
 	
 	<div id="content" class="w3-container">
-	<p>Do you have a sore throat?</p>
-	<a href="#four" onclick="coldAdd();" class="w3-btn w3-black"> Yes </a>
-	<a href="#four" onclick="allergyAdd();" class="w3-btn w3-black"> No </a>
+	<p>Do you have any other symptoms that seem abnormal?</p>
+	<a href="#four" onclick="malAdd();" class="w3-btn w3-black"> Yes </a>
+	<a href="#four" onclick="benignAdd();" class="w3-btn w3-black"> No </a>
 	</div>
 
 </div>
@@ -147,9 +147,9 @@ blah, blah, blah, blah
 	</div>
 	
 	<div id="content" class="w3-container">
-	<p>Are your symptoms seasonal or chronic?</p>
-	<a href="#five" onclick="allergyAdd();" class="w3-btn w3-black"> Seasonal </a>
-	<a href="#five" onclick="coldAdd();" class="w3-btn w3-black"> Chronic </a>
+	<p>Are those the only cluster of tumors you have?</p>
+	<a href="#five" onclick="benignAdd();" class="w3-btn w3-black"> Yes </a>
+	<a href="#five" onclick="malAdd();" class="w3-btn w3-black"> No </a>
 	</div>
 </div>
 
@@ -161,9 +161,9 @@ blah, blah, blah, blah
 	</div>
 	
 	<div id="content" class="w3-container">
-	<p>Are your symptoms worse in the morning?</p>
-	<a href="#six" onclick="allergyAdd();" class="w3-btn w3-black"> Yes </a>
-	<a href="#six" onclick="coldAdd();" class="w3-btn w3-black"> No </a>
+	<p>Do you have any history of cancer in your family?</p>
+	<a href="#six" onclick="malAdd();" class="w3-btn w3-black"> Yes </a>
+	<a href="#six" onclick="benignAdd();" class="w3-btn w3-black"> No </a>
 	</div>
 </div>
 
@@ -175,9 +175,9 @@ blah, blah, blah, blah
 	</div>
 	
 	<div id="content" class="w3-container">
-	<p>Are you experiencing any other symptoms of sickness?</p>
-	<a href="#Results" onclick="coldAdd();" class="w3-btn w3-black"> Yes </a>
-	<a href="#Results" onclick="allergyAdd();" class="w3-btn w3-black"> No </a>
+	<p>Was the tumor development a short term issue?</p>
+	<a href="#Results" onclick="benignAdd();" class="w3-btn w3-black"> Yes </a>
+	<a href="#Results" onclick="malAdd();" class="w3-btn w3-black"> No </a>
 	</div>
 </div>
 
